@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 import Footer from "./footer";
-import Image1 from "./assets/About1.png";
-import Image2 from "./assets/AboutImg2.jpeg";
+import Image1 from "./assets/Mogapair/Image9.jpeg";
+import Image2 from "./assets/Mogapair/Image1.jpg";
 import Image3 from "./assets/AboutUs3.png";
 import Image4 from "./assets/AboutUs4.png"
 import { ArrowUpRight } from "lucide-react";
@@ -70,7 +70,7 @@ function AboutUsPage() {
 
                         {/* Image Overlay Button */}
                         <Link
-                            to="/"
+                            to="https://www.youtube.com/watch?v=f0CvGENZsHA"
                             className="absolute bottom-3 left-3 flex min-w-[190px] items-center justify-between gap-5 rounded-xl bg-white p-3 text-[#061512] shadow-lg transition hover:bg-[#B6FF00] sm:bottom-4 sm:left-4"
                         >
                             <span className="text-xs font-semibold leading-relaxed">
@@ -92,11 +92,12 @@ function AboutUsPage() {
                 </div>
 
                 {/* Right Large Image */}
-                <div className="min-w-0">
+                <div className="min-w-0    ">
                     <img
                         src={Image2}
                         alt="VIVAFIT women's fitness gym reception"
-                        className="h-[320px] w-full rounded-2xl object-cover sm:h-[420px] lg:h-[560px]"
+                        className="h-[320px] w-full rounded-2xl object-cover sm:h-[420px]  lg:h-[560px]"
+                        
                     />
                 </div>
             </section>
@@ -126,12 +127,12 @@ function AboutUsPage() {
                         {/* Statistics Cards */}
                         <div className="grid grid-cols-2 gap-3">
                             <div className="rounded-lg bg-[#1B2927] p-3 sm:p-4">
-                                <span className="text-xl font-extrabold sm:text-2xl">12+</span>
+                                <span className="text-xl font-extrabold sm:text-2xl">100+</span>
                                 <p className="mt-1 text-xs text-white/75">Certified Trainers</p>
                             </div>
 
                             <div className="rounded-lg bg-[#1B2927] p-3 sm:p-4">
-                                <span className="text-xl font-extrabold sm:text-2xl">3,500+</span>
+                                <span className="text-xl font-extrabold sm:text-2xl">10,000+</span>
                                 <p className="mt-1 text-xs text-white/75">Happy Members</p>
                             </div>
 
@@ -143,7 +144,7 @@ function AboutUsPage() {
                             </div>
 
                             <div className="rounded-lg bg-[#1B2927] p-3 sm:p-4">
-                                <span className="text-xl font-extrabold sm:text-2xl">50+</span>
+                                <span className="text-xl font-extrabold sm:text-2xl">25+</span>
                                 <p className="mt-1 text-xs text-white/75">Weekly Classes</p>
                             </div>
                         </div>
@@ -225,18 +226,7 @@ function AboutUsPage() {
             <div className="overflow-hidden bg-[#0F1C1A] px-5 py-14 text-white sm:px-8 sm:py-20 lg:px-12 lg:py-24">
                 <div className="mx-auto max-w-[1200px]">
 
-                    {/* Section Header */}
-                    <div className="mb-10 flex items-center justify-between gap-4 sm:mb-14">
-                        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#B6FF00] sm:text-sm">
-                            Our Vision
-                        </p>
-
-                        <span className="h-px flex-1 max-w-[180px] bg-white/20" />
-
-                        <span className="text-xs text-white/50 sm:text-sm">
-                            VIVAFIT®
-                        </span>
-                    </div>
+                  
 
                     {/* Main Layout */}
                     <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-14 lg:gap-20">
@@ -260,9 +250,9 @@ function AboutUsPage() {
 
                         {/* Content */}
                         <div className="py-2 md:py-8">
-                            <p className="mb-5 text-sm font-medium text-white/50">
-                                A VISION BEYOND FITNESS
-                            </p>
+                            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#B6FF00] sm:text-sm mb-15">
+                            Our Vision
+                        </p>
 
                             <h2 className="text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl">
                                 Every Woman.

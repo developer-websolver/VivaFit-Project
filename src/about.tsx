@@ -44,7 +44,7 @@ function AboutPage() {
             <h3 className="text-sm font-extrabold leading-snug sm:text-base lg:mb-4 lg:text-lg">
               Trusted by Over
               <br />
-              1,000 Members
+              10,000 + Members
             </h3>
           </div>
 
@@ -59,7 +59,7 @@ function AboutPage() {
             ))}
 
             <div className="z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-[#061512] text-[9px] font-bold text-white sm:h-9 sm:w-9">
-              +1K
+              +10K
             </div>
           </div>
         </div>

@@ -6,14 +6,16 @@ import {
   UserRoundCheck,
   Footprints,
 } from "lucide-react";
-import ServiceHomeImg from "./assets/ServiceHomeImg.png"
-import Service1 from "./assets/Service1.png";
-import Service2 from "./assets/Service2.png";
-import Service3 from "./assets/Service3.png";
-import Service4 from "./assets/Service4.png";
+import ServiceHomeImg from "./assets/ServiceHomeImg.webp"
+import Service1 from "./assets/Service1.webp";
+import Service2 from "./assets/Service2.webp";
+import Service3 from "./assets/Service3.webp";
+import Service4 from "./assets/Service4.webp";
+import { Link } from "react-router-dom";
 
 function ServicePage() {
   const [activeService, setActiveService] = useState(1);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const servicelist = [
     {
@@ -22,6 +24,7 @@ function ServicePage() {
       description:
         "Work towards weight management, inch loss, body toning, flexibility, and lean muscle development through fitness programs suited to your goals and fitness level.",
       image: Service1,
+      path: "/service-generalfitness",
     },
     {
       logo: Users,
@@ -29,18 +32,21 @@ function ServicePage() {
       description:
         "Access dietitian guidance, physiotherapy, and rehabilitation services to complement your fitness journey according to your individual needs.",
       image: Service2,
+      path: "/service-dietitian",
     },
     {
       logo: UserRoundCheck,
       title: "Personal Training & Strength Development",
-      description:"Receive individual workout guidance to improve strength, develop lean muscle, and build consistent exercise habits based on your fitness needs.",
+      description: "Receive individual workout guidance to improve strength, develop lean muscle, and build consistent exercise habits based on your fitness needs.",
       image: Service3,
+      path: "/service-personaltraining",
     },
     {
       logo: Footprints,
       title: "Zumba, Yoga & Outdoor Fitness Activities",
-      description:"Add variety to your routine with Zumba, yoga, Aqua Zumba, beach yoga, turf activities, and terrace workouts.",
+      description: "Add variety to your routine with Zumba, yoga, Aqua Zumba, beach yoga, turf activities, and terrace workouts.",
       image: Service4,
+      path: "/service-zumbayoga",
     },
   ];
 
@@ -126,7 +132,7 @@ function ServicePage() {
                 </div>
 
                 {/* Arrow Button */}
-                <div className="flex justify-end md:col-span-3 lg:col-span-1">
+                {/* <div className="flex justify-end md:col-span-3 lg:col-span-1">
                   <span
                     className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition-all duration-300 group-hover:scale-110 ${isActive
                       ? "border-[#061512]"
@@ -142,6 +148,24 @@ function ServicePage() {
                       <ArrowUpRight size={19} strokeWidth={2.5} />
                     </span>
                   </span>
+                </div> */}
+                <div className="flex justify-end md:col-span-3 lg:col-span-1">
+                  <Link
+                    to={service.path}
+                    className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition-all duration-300 group-hover:scale-110 ${isActive
+                      ? "border-[#061512]"
+                      : "border-white/25 group-hover:border-[#B6FF00]"
+                      }`}
+                  >
+                    <span
+                      className={`flex h-7 w-7 items-center justify-center rounded-full transition-colors duration-300 ${isActive
+                        ? "bg-[#061512] text-[#B6FF00]"
+                        : "bg-white/50 text-[#061512] group-hover:bg-[#B6FF00]"
+                        }`}
+                    >
+                      <ArrowUpRight size={19} strokeWidth={2.5} />
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -162,11 +186,11 @@ function ServicePage() {
               <h2 className="mt-5 max-w-xl text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-[38px]">
                 Proven <span className="text-[#B6FF00]">Numbers.</span>
                 {" "}
-                
+
               </h2>
               <h2 className=" max-w-xl text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-[38px]">
-                
-            
+
+
                 Powerful <span className="text-[#B6FF00]">Results.</span>{" "}
               </h2>
 
@@ -179,7 +203,7 @@ function ServicePage() {
               <ul className="mt-7 grid grid-cols-2">
                 <li className="border-b border-r border-white/15 px-3 py-5 text-center sm:py-6">
                   <span className="text-4xl font-light tracking-tight text-transparent [-webkit-text-stroke:1px_#e5e7eb] sm:text-5xl">
-                    10+
+                    20+
                   </span>
                   <h3 className="mt-2 text-xs font-semibold sm:text-sm">
                     Years of Coaching
@@ -188,7 +212,7 @@ function ServicePage() {
 
                 <li className="border-b border-white/15 px-3 py-5 text-center sm:py-6">
                   <span className="text-4xl font-light tracking-tight text-transparent [-webkit-text-stroke:1px_#e5e7eb] sm:text-5xl">
-                    5K+
+                    10K+
                   </span>
                   <h3 className="mt-2 text-xs font-semibold sm:text-sm">
                     Members Transformed
@@ -197,7 +221,7 @@ function ServicePage() {
 
                 <li className="border-r border-white/15 px-3 py-5 text-center sm:py-6">
                   <span className="text-4xl font-light tracking-tight text-transparent [-webkit-text-stroke:1px_#e5e7eb] sm:text-5xl">
-                    250+
+                    100+
                   </span>
                   <h3 className="mt-2 text-xs font-semibold sm:text-sm">
                     Group Sessions Monthly
@@ -226,22 +250,65 @@ function ServicePage() {
               </div>
 
               {/* Play Button */}
-              <button
-                type="button"
-                aria-label="Watch VivaFit introduction video"
-                className="absolute -left-2 -top-3 flex h-[68px] w-[68px] items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-105 sm:-left-4 sm:-top-4 sm:h-[82px] sm:w-[82px]"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B6FF00] sm:h-12 sm:w-12">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="ml-1 h-5 w-5 text-black"
-                    aria-hidden="true"
+
+              <>
+                {/* Video Play Button */}
+                <button
+                  type="button"
+                  onClick={() => setIsVideoOpen(true)}
+                  aria-label="Watch VivaFit introduction video"
+                  className="absolute -left-2 -top-3 flex h-[68px] w-[68px] items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-105 sm:-left-4 sm:-top-4 sm:h-[82px] sm:w-[82px]"
+                >
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#B6FF00] sm:h-12 sm:w-12">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="ml-1 h-5 w-5 text-black"
+                      aria-hidden="true"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                </button>
+
+                {/* Responsive YouTube Video Modal */}
+                {isVideoOpen && (
+                  <div
+                    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4 sm:p-8 mt-20"
+                    onClick={() => setIsVideoOpen(false)}
                   >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-              </button>
+                    <div
+                      role="dialog"
+                      aria-modal="true"
+                      aria-label="VIVAFIT introduction video"
+                      className="relative w-full max-w-4xl"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {/* Close Button */}
+                      <button
+                        type="button"
+                        onClick={() => setIsVideoOpen(false)}
+                        aria-label="Close video"
+                        className="absolute -top-12 right-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition hover:bg-white/20"
+                      >
+                        &times;
+                      </button>
+
+                      {/* Video Player */}
+                      <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-black shadow-2xl">
+                        <iframe
+                          className="absolute inset-0 h-full w-full"
+                          src="https://www.youtube.com/embed/f0CvGENZsHA?si=jQJn6HIdNvaOJrko"
+                          title="VIVAFIT introduction video"
+                          allow="autoplay; encrypted-media; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </>
+
             </div>
 
           </div>

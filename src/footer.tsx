@@ -116,6 +116,12 @@ function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/vivafit-franchise" className="transition-colors hover:text-[#B6FF00]">
+                  Franchise
+                </Link>
+              </li>
+
+              <li>
                 <Link to="/services" className="transition-colors hover:text-[#B6FF00]">
                   Our Services
                 </Link>
@@ -126,8 +132,8 @@ function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="transition-colors hover:text-[#B6FF00]">
-                  Blog
+                <Link to="/blogs" className="transition-colors hover:text-[#B6FF00]">
+                  Blogs
                 </Link>
               </li>
               <li>
@@ -139,35 +145,10 @@ function Footer() {
           </div>
 
 
-          <div>
-            <label htmlFor="email" className="mb-2 block text-sm font-medium text-white">
-              Ready to Start
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email address"
-              required
-              className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder:text-white/50 outline-none transition focus:border-[#B6FF00] focus:ring-1 focus:ring-[#B6FF00]"
-            />
-          </div>
-
-
-        </div>
-
-
-
-        {/* Copyright and social media */}
-        <div className="flex flex-col gap-5 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-white/75 sm:text-base">
-            © 2026 VIVAFIT. All rights reserved.
-          </p>
-
           <div className="flex flex-wrap items-center gap-3">
             <Link
-            
-               to="https://www.instagram.com/vivafitindiaofficial"
+
+              to="https://www.instagram.com/vivafitindiaofficial"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -178,7 +159,7 @@ function Footer() {
             </Link>
 
             <Link
-                to="https://www.facebook.com/vivafitindiaofficial"
+              to="https://www.facebook.com/vivafitindiaofficial"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -199,7 +180,7 @@ function Footer() {
               Linkedin
             </Link>
             <Link
-              to="https://www.youtube.com/@Vivafiteu"
+              to="https://www.youtube.com/@vivafitindia"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
@@ -209,6 +190,26 @@ function Footer() {
               YouTube
             </Link>
           </div>
+
+
+
+
+        </div>
+
+
+
+        {/* Copyright and social media */}
+        <div className="flex flex-col gap-5 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-white/75 sm:text-base">
+            © 2026 VIVAFIT. All rights reserved.
+          </p>
+
+           <div className="flex flex-wrap items-center ">
+            <Link to="">Terms & Policy</Link>
+          </div>
+
+
+
         </div>
 
       </div>

@@ -3,11 +3,16 @@ import { ArrowUpRight, LocateIcon, Mail, MapPin, Phone, ArrowRight, ArrowLeft } 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../footer";
+import FaqPage from "../faq";
+import Image1 from "../assets/Thirumangalam/Image1.jpg";
+import Image2 from "../assets/Thirumangalam/Image2.jpg";
+import Image3 from "../assets/Thirumangalam/Image3.jpg";
+import Image4 from "../assets/Thirumangalam/Image4.jpg";
 
 const gymImages = [
-    "/images/thirumangalam.jpg",
-    "/images/thirumangalam-2.jpg",
-    "/images/thirumangalam-3.jpg",
+    Image1,
+    Image2,
+    Image3, Image4,
 ];
 
 function Thirumangalam() {
@@ -35,43 +40,38 @@ function Thirumangalam() {
     return (
         <main className="min-h-screen overflow-hidden bg-[#061512] text-white">
 
-            {/* <div className="border-b border-white/10 bg-[#061512]">
-                <div className="mx-auto flex max-w-[1280px] items-center justify-between pt-45 gap-4 px-5 py-3 sm:px-8 lg:px-12" >
-                    <h4 className="text-sm font-semibold tracking-wide sm:text-base">
+            <div className="border-b border-white/10 bg-[#061512]">
+                <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12 mt-35">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B6FF00] sm:text-sm">
 
-                    </h4>
+                    </p>
 
                     <nav aria-label="Breadcrumb">
-                        <ul className="flex items-center gap-2 text-xs text-white/70 sm:gap-3">
+                        <ul className="flex items-center gap-2 text-xs text-white/60 sm:gap-3 sm:text-sm">
                             <li>
                                 <Link to="/" className="transition hover:text-[#B6FF00]">
                                     Home
                                 </Link>
                             </li>
-
-                            <li aria-hidden="true" className="text-white/40">
-                                /
-                            </li>
-
+                            <li aria-hidden="true">/</li>
                             <li>
                                 <Link
                                     to="/gyms"
                                     className="rounded-full bg-white/10 px-3 py-1.5 text-white transition hover:bg-white/15"
-                                    aria-current="page"
                                 >
-                                    All Gyms
+                                    Our Gyms
                                 </Link>
                             </li>
                         </ul>
                     </nav>
                 </div>
-            </div> */}
+            </div>
             {/* Hero Section */}
-            <section className="relative px-5 pb-12 pt-20 sm:px-8 sm:pb-16 sm:pt-28 lg:px-16 lg:pt-32">
+            <section className="relative px-5 pb-12 pt-20 sm:px-8 sm:pb-16 sm:pt-28 lg:px-16 lg:pt-32 mb-17">
                 <div className="absolute -right-20 top-10 h-64 w-64 rounded-full bg-[#B6FF00]/10 blur-[100px]" />
 
                 <div className="relative mx-auto max-w-7xl">
-                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#B6FF00]/25 bg-[#B6FF00]/5 px-4 py-2 mt-25 text-xs font-semibold uppercase tracking-[0.18em] text-[#B6FF00]">
+                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#B6FF00]/25 bg-[#B6FF00]/5 px-4 py-2  text-xs font-semibold uppercase tracking-[0.18em] text-[#B6FF00]">
                         <MapPin size={15} />
                         VIVAFIT Chennai
                     </div>
@@ -229,7 +229,7 @@ function Thirumangalam() {
 
                         <div className="mt-6 rounded-2xl border border-[#B6FF00]/20 bg-[#B6FF00]/5 p-5 sm:p-6">
                             <h3 className="mb-5 text-lg font-bold text-white">
-                                Gym <span className="text-[#B6FF00]">Information</span>
+                                Contact <span className="text-[#B6FF00]">Us</span>
                             </h3>
 
                             <div className="space-y-4">
@@ -348,6 +348,7 @@ function Thirumangalam() {
                     </Link>
                 </div>
             </section>
+            <FaqPage />
             <Footer />
         </main>
     );

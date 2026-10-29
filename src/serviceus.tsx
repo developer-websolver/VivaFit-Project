@@ -45,6 +45,7 @@ function ServiceUsPage() {
             description:
                 "Work towards weight management, inch loss, body toning, flexibility, and lean muscle development through fitness programs suited to your goals and fitness level.",
             image: Service1,
+            path: "/service-generalfitness",
         },
         {
             logo: Users,
@@ -52,18 +53,21 @@ function ServiceUsPage() {
             description:
                 "Access dietitian guidance, physiotherapy, and rehabilitation services to complement your fitness journey according to your individual needs.",
             image: Service2,
+            path: "/service-dietitian",
         },
         {
             logo: UserRoundCheck,
             title: "Personal Training & Strength Development",
             description: "Receive individual workout guidance to improve strength, develop lean muscle, and build consistent exercise habits based on your fitness needs.",
             image: Service3,
+            path: "/service-personaltraining",
         },
         {
             logo: Footprints,
             title: "Zumba, Yoga & Outdoor Fitness Activities",
             description: "Add variety to your routine with Zumba, yoga, Aqua Zumba, beach yoga, turf activities, and terrace workouts.",
             image: Service4,
+            path: "/service-zumbayoga",
         },
     ];
 
@@ -182,7 +186,8 @@ function ServiceUsPage() {
 
                                 {/* Arrow Button */}
                                 <div className="flex justify-end md:col-span-3 lg:col-span-1">
-                                    <span
+                                    <Link
+                                        to={service.path}
                                         className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border transition-all duration-300 group-hover:scale-110 ${isActive
                                             ? "border-[#061512]"
                                             : "border-white/25 group-hover:border-[#B6FF00]"
@@ -196,7 +201,7 @@ function ServiceUsPage() {
                                         >
                                             <ArrowUpRight size={19} strokeWidth={2.5} />
                                         </span>
-                                    </span>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

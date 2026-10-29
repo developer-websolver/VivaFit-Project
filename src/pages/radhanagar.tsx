@@ -3,11 +3,18 @@ import { ArrowUpRight, LocateIcon, Mail, MapPin, Phone, ArrowRight, ArrowLeft } 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../footer";
+import FaqPage from "../faq";
+import Image1 from "../assets/Radhanagar/Image1.jpg";
+import Image2 from "../assets/Radhanagar/Image2.jpg";
+import Image3 from "../assets/Radhanagar/Image3.jpg";
+import Image4 from "../assets/Radhanagar/Image4.jpg";
+import Image5 from "../assets/Radhanagar/Image5.jpg";
 
 const gymImages = [
-    "/images/thirumangalam.jpg",
-    "/images/thirumangalam-2.jpg",
-    "/images/thirumangalam-3.jpg",
+    Image1,
+    Image2,Image3,
+    Image4,
+    Image5
 ];
 
 function RadhanagarPage() {
@@ -34,12 +41,38 @@ function RadhanagarPage() {
 
     return (
         <main className="min-h-screen overflow-hidden bg-[#061512] text-white">
+            <div className="border-b border-white/10 bg-[#061512]">
+                <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12 mt-35">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#B6FF00] sm:text-sm">
+
+                    </p>
+
+                    <nav aria-label="Breadcrumb">
+                        <ul className="flex items-center gap-2 text-xs text-white/60 sm:gap-3 sm:text-sm">
+                            <li>
+                                <Link to="/" className="transition hover:text-[#B6FF00]">
+                                    Home
+                                </Link>
+                            </li>
+                            <li aria-hidden="true">/</li>
+                            <li>
+                                <Link
+                                    to="/gyms"
+                                    className="rounded-full bg-white/10 px-3 py-1.5 text-white transition hover:bg-white/15"
+                                >
+                                    Our Gyms
+                                </Link>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
             {/* Hero Section */}
-            <section className="relative px-5 pb-12 pt-20 sm:px-8 sm:pb-16 sm:pt-28 lg:px-16 lg:pt-32">
+            <section className="relative px-5 pb-12 pt-20 sm:px-8 sm:pb-16 sm:pt-28 lg:px-16 lg:pt-32 mb-17">
                 <div className="absolute -right-20 top-10 h-64 w-64 rounded-full bg-[#B6FF00]/10 blur-[100px]" />
 
                 <div className="relative mx-auto max-w-7xl">
-                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#B6FF00]/25 bg-[#B6FF00]/5 px-4 py-2 mt-25 text-xs font-semibold uppercase tracking-[0.18em] text-[#B6FF00]">
+                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#B6FF00]/25 bg-[#B6FF00]/5 px-4 py-2  text-xs font-semibold uppercase tracking-[0.18em] text-[#B6FF00]">
                         <MapPin size={15} />
                         VIVAFIT Chennai
                     </div>
@@ -145,11 +178,12 @@ function RadhanagarPage() {
                         </h2>
 
                         <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base sm:leading-8">
-                            VIVAFIT is a dedicated ladies gym in Radha Nagar, Chennai, offering women-focused fitness programs in a supportive workout environment. Whether your goal is general fitness, weight management, body toning, inch loss, or lean muscle development, our fitness options help you work towards your personal goals.
+                            VIVAFIT is a ladies gym in Radha Nagar offering women-focused fitness options for general fitness, strength development, weight management, and overall physical well-being.
                         </p>
 
                         <p className="mt-4 text-sm leading-7 text-gray-400 sm:text-base sm:leading-8">
-                            As a women's gym in Radha Nagar, VIVAFIT offers personal training, strength development, flexibility exercises, and structured workout routines to suit different fitness levels. Women can explore training options that support physical strength, endurance, and consistent exercise habits.
+
+                            Women can explore workouts for body toning, inch loss, flexibility, and lean muscle development, alongside personal training options that support individual fitness goals.
                         </p>
 
                         <Link
@@ -177,12 +211,12 @@ function RadhanagarPage() {
                         </h2>
 
                         <p className="mt-5 text-sm leading-7 text-gray-400 sm:text-base sm:leading-8">
-                            VIVAFIT Radha Nagar also offers fitness activities beyond traditional workouts, including Zumba, yoga, and outdoor sessions such as Aqua Zumba, beach yoga, turf activities, and terrace workouts. With dietitian guidance, physiotherapy, and rehabilitation services also available, VIVAFIT provides a range of fitness options to support women's health, fitness, and overall well-being.
+                            VIVAFIT also offers Zumba, yoga, Aqua Zumba, beach yoga, turf activities, and terrace workouts. Dietitian guidance, physiotherapy, and rehabilitation services offer additional support for women pursuing their fitness and wellness goals.
                         </p>
 
                         <div className="mt-6 rounded-2xl border border-[#B6FF00]/20 bg-[#B6FF00]/5 p-5 sm:p-6">
                             <h3 className="mb-5 text-lg font-bold text-white">
-                                Gym <span className="text-[#B6FF00]">Information</span>
+                                Contact <span className="text-[#B6FF00]">Us</span>
                             </h3>
 
                             <div className="space-y-4">
@@ -264,7 +298,7 @@ function RadhanagarPage() {
                             referrerPolicy="no-referrer-when-downgrade"
                             allowFullScreen
                         />
-                        
+
 
                         <div className="p-4 sm:p-5">
                             <Link
@@ -302,6 +336,7 @@ function RadhanagarPage() {
                     </Link>
                 </div>
             </section>
+            <FaqPage />
             <Footer />
         </main>
     );

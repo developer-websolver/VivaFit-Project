@@ -2,7 +2,7 @@
 import * as MarqueeModule from "react-fast-marquee";
 import type React from "react";
 import { ArrowUpRight, ChevronsRight } from "lucide-react";
-import Homeimg from "./assets/Home2.png";
+import Homeimg from "./assets/Home2.webp";
 import { Link } from "react-router-dom";
 
 // React Fast Marquee export compatibility
@@ -31,7 +31,7 @@ function HomePage() {
             <div className="pointer-events-none absolute left-[45%] top-[35%] h-[200px] w-[200px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#B6FF00]/10 blur-[100px]" />
 
             {/* Hero Content */}
-            <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center py-10 text-center sm:py-14 md:py-16 mt-20 lg:mt-35">
+            <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center py-10 text-center sm:py-14 md:py-16 mt-20 lg:mt-30">
 
                 {/* Heading */}
                 <h1 className="text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl lg:text-8xl">
@@ -54,7 +54,7 @@ function HomePage() {
                 <div className="mt-7 flex flex-row items-center justify-center gap-3 sm:mt-10 sm:gap-4">
 
                     <Link
-                        to=""
+                        to="/contactus"
                         className="group flex cursor-pointer items-center gap-2 rounded-full bg-[#B6FF00] px-7 py-3.5 font-bold text-[#071512] shadow-lg shadow-[#B6FF00]/20 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl sm:px-8 sm:py-4"
                     >
                         Book Now
@@ -65,7 +65,7 @@ function HomePage() {
                     </Link>
 
                     <Link
-                        to="/about"
+                        to="/contactus"
                         aria-label="Explore VIVAFIT"
                         className="group flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border border-[#B6FF00]/50 bg-[#B6FF00]/10 text-[#B6FF00] transition-all duration-300 hover:-translate-y-1 hover:border-[#B6FF00] hover:bg-[#B6FF00] hover:text-[#071512] sm:h-14 sm:w-14"
                     >

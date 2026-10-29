@@ -11,6 +11,7 @@ function Navbar() {
   const navLinks = [
     // { name: "Home", path: "/" },
     { name: "About Us", path: "/aboutus" },
+    {name:"Franchise",path:"/vivafit-franchise"},
     { name: "Our Services", path: "/services" },
     { name: "Blogs", path: "/blogs" },
     { name: "Contact Us", path: "/contactus" },
@@ -19,11 +20,18 @@ function Navbar() {
   const gymLinks = [
     { name: "Thirumangalam", path: "/vivafit-thirumangalam" },
     { name: "Ambattur", path: "/vivafit-ambattur" },
+    { name: "Pammal", path: "/vivafit-Pammal" },
+    { name: "Madhanandapuram", path: "/vivafit-madhanandapuram" },
+    { name: "Mogappair", path: "/vivafit-mogappair" },
+    { name: "Radha Nagar", path: "/vivafit-radhanagar" },
     { name: "Vadapalani", path: "/vivafit-vadapalani" },
+    { name: "Alapakkam", path: "/vivafit-alapakkam" },
+    { name: "Korattur", path: "/vivafit-korattur" },
   ];
 
 
-  const menuButtonRef = useRef(null);
+  // const menuButtonRef = useRef(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const closeMenu = () => {
     menuButtonRef.current?.focus();
@@ -458,6 +466,7 @@ function Navbar() {
                     }`}
                 />
               </button>
+           
 
               <div
                 className={`grid transition-[grid-template-rows,opacity] duration-300 ease-in-out ${gymsOpen

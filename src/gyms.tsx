@@ -1,64 +1,81 @@
 
-import { ArrowUpRight, Dumbbell, MapPin } from "lucide-react";
+import { ArrowUpRight, Dumbbell,} from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
+import FaqPage from "./faq";
+import Gym1 from "./assets/Thirumangalam/Image1.jpg";
+import Gym2 from "./assets/Ambattur/Image2.jpg";
+import Gym3 from "./assets/Pammal/Image3.jpg";
+import Gym4 from "./assets/Madhanandpuram/Image2.png";
+import Gym5 from "./assets/Mogapair/Image1.jpg";
+import Gym6 from "./assets/Radhanagar/Image1.jpg";
+import Gym7 from "./assets/Vadapalani/Image2.jpg";
+import Gym8 from "./assets/Alapakkam/Image1.png";
+import Gym9 from "./assets/Korratur/Image1.jpeg";
 
 const gyms = [
   {
     name: "Thirumangalam",
-    image: "/images/thirumangalam.jpg",
+    image: Gym1,
     description:
       "Looking for a ladies gym in Thirumangalam, Chennai? VIVAFIT offers strength training, weight management, personal training, Zumba, and yoga in a supportive environment.",
     path: "/vivafit-thirumangalam",
   },
   {
     name: "Ambattur",
-    image: "/images/ambattur.jpg",
+    image: Gym2,
     description:
       "Discover VIVAFIT, a ladies gym in Ambattur offering strength training, personal training, Zumba, yoga, and women-focused fitness programs.",
     path: "/vivafit-ambattur",
   },
   {
     name: "Pammal",
-    image: "/images/pammal.jpg",
+    image: Gym3,
     description:
       "Looking for a ladies gym in Pammal? Explore fitness programs designed for strength development, body toning, flexibility, and general fitness.",
     path: "/vivafit-pammal",
   },
   {
     name: "Madhanandapuram",
-    image: "/images/madhanandapuram.jpg",
+    image: Gym4,
     description:
       "Find women-focused fitness programs at VIVAFIT Madhanandapuram, including strength training, body toning, and guided workouts.",
     path: "/vivafit-madhanandapuram",
   },
   {
     name: "Mogappair",
-    image: "/images/mogappair.jpg",
+    image: Gym5,
     description:
       "VIVAFIT Mogappair offers personal training, strength development, body toning, Zumba, and yoga for different fitness levels.",
     path: "/vivafit-mogappair",
   },
   {
     name: "Radha Nagar",
-    image: "/images/radha-nagar.jpg",
+    image: Gym6,
     description:
       "VIVAFIT Radha Nagar offers ladies' fitness programs, strength training, body toning, and flexibility workouts in a supportive environment.",
     path: "/vivafit-radhanagar",
   },
   {
     name: "Vadapalani",
-    image: "/images/vadapalani.jpg",
+    image: Gym7,
     description:
       "Explore VIVAFIT Vadapalani for women-focused fitness options, including strength training, body toning, Zumba, and yoga.",
     path: "/vivafit-vadapalani",
   },
   {
     name: "Alapakkam",
-    image: "/images/alapakkam.jpg",
+    image: Gym8,
     description:
       "Discover women's fitness programs at VIVAFIT Alapakkam, with strength development, flexibility training, body toning, and group workouts.",
     path: "/vivafit-alapakkam",
+  },
+   {
+    name: "Korattur",
+    image:Gym9 ,
+    description:
+      "Discover women's fitness programs at VIVAFIT Korattur, with strength development, flexibility training, body toning, and group workouts.",
+    path: "/vivafit-korattur",
   },
 ];
 
@@ -135,10 +152,10 @@ function GymsPage() {
                     VIVAFIT LOCATION
                   </span>
 
-                  <div className="absolute bottom-4 left-5 flex items-center gap-2 text-sm text-white">
+                  {/* <div className="absolute bottom-4 left-5 flex items-center gap-2 text-sm text-white">
                     <MapPin size={16} className="text-[#B6FF00]" />
                     Chennai, Tamil Nadu
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Card Content */}
@@ -208,6 +225,7 @@ function GymsPage() {
           </Link>
         </div>
       </section>
+      <FaqPage/>
       <Footer/>
     </main>
   );

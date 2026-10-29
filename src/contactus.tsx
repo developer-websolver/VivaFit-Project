@@ -202,6 +202,8 @@ function ContactPage() {
                         Select a subject
                       </option>
                       <option value="Membership">Membership</option>
+                      <option value="Franchise Enquiry">Franchise Enquiry</option>
+                      <option value="Job Enquiry" >Job Enquiry</option>
                       <option value="Personal Training">
                         Personal Training
                       </option>
@@ -298,7 +300,7 @@ function ContactPage() {
                   <div className="min-w-0 pt-0.5">
                     <h4 className="text-sm font-bold">Phone Number</h4>
                     <a
-                      href="tel:+910000000000"
+                      href="tel:+91 99866 19475"
                       className="mt-1 block break-words text-xs text-[#061512]/75 hover:underline"
                     >
                       +91 - 99866 19475
@@ -315,7 +317,7 @@ function ContactPage() {
                   <div className="min-w-0 pt-0.5">
                     <h4 className="text-sm font-bold">Email</h4>
                     <Link
-                      to="mailto:your-email@example.com"
+                      to="mailto:hello@vivafit.life"
                       className="mt-1 block break-all text-xs text-[#061512]/75 hover:underline"
                     >
                       hello@vivafit.life
@@ -363,7 +365,7 @@ function ContactPage() {
                   </Link>
 
                   <Link
-                    to="https://www.youtube.com/@Vivafiteu"
+                    to="https://www.youtube.com/@vivafitindia"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="YouTube"
