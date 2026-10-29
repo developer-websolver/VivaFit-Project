@@ -8,10 +8,10 @@ import {
 } from "lucide-react";
 import FaqPage from "./faq";
 import Footer from "./footer";
-import Blog1 from "./assets/Blog1.png";
-import Blog2 from "./assets/Blog2.png";
-import Blog3 from "./assets/Blog3.png";
-import Blog4 from "./assets/Blog4.png";
+import Blog1 from "./assets/Blog1.webp";
+import Blog2 from "./assets/Blog2.webp";
+import Blog3 from "./assets/Blog3.webp";
+import Blog4 from "./assets/Blog4.webp";
 
 const blogs = [
   {

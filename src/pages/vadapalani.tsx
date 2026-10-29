@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../footer";
 import FaqPage from "../faq";
-import Image1 from "../assets/Vadapalani/Image1.jpg";
-import Image2 from "../assets/Vadapalani/Image2.jpg";
-import Image3 from "../assets/Vadapalani/Image3.jpg";
-import Image4 from "../assets/Vadapalani/Image4.jpg";
-import Image5 from "../assets/Vadapalani/Image5.jpg";
-import Image6 from "../assets/Vadapalani/Image6.jpg";
-import Image7 from "../assets/Vadapalani/Image7.jpg";
+import Image1 from "../assets/Vadapalani/Image1.webp";
+import Image2 from "../assets/Vadapalani/Image2.webp";
+import Image3 from "../assets/Vadapalani/Image3.webp";
+import Image4 from "../assets/Vadapalani/Image4.webp";
+import Image5 from "../assets/Vadapalani/Image5.webp";
+import Image6 from "../assets/Vadapalani/Image6.webp";
+import Image7 from "../assets/Vadapalani/Image7.webp";
 
 const gymImages = [
     Image1,

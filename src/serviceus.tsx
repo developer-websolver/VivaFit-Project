@@ -12,11 +12,11 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import Footer from "./footer";
-import ServiceUsImg from "./assets/ServiceUsImg.png";
-import Service1 from "./assets/Service1.png";
-import Service2 from "./assets/Service2.png";
-import Service3 from "./assets/Service3.png";
-import Service4 from "./assets/Service4.png";
+import ServiceUsImg from "./assets/ServiceUsImg.webp";
+import Service1 from "./assets/Service1.webp";
+import Service2 from "./assets/Service2.webp";
+import Service3 from "./assets/Service3.webp";
+import Service4 from "./assets/Service4.webp";
 
 
 const MarqueeModuleDefault = (
@@ -229,7 +229,7 @@ function ServiceUsPage() {
                         />
 
                         <span className="whitespace-nowrap text-xs font-bold tracking-wider text-[#061512] sm:text-sm md:text-base">
-                            Jion Us Today
+                            Join Us Today
                         </span>
 
                         <ChevronsRight
@@ -238,7 +238,7 @@ function ServiceUsPage() {
                         />
 
                         <span className="whitespace-nowrap text-xs font-bold tracking-wider text-[#061512] sm:text-sm md:text-base">
-                            Jion Us Today
+                            Join Us Today
                         </span>
 
                         <ChevronsRight
@@ -248,7 +248,7 @@ function ServiceUsPage() {
 
                         <span className="whitespace-nowrap text-xs font-bold tracking-wider text-[#061512] sm:text-sm md:text-base">
 
-                            Jion Us Today
+                            Join Us Today
                         </span>
 
                         <ChevronsRight

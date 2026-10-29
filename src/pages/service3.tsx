@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 import FaqPage from "../faq";
 import Footer from "../footer";
-import ServiceImg1 from "../assets/Service3Img1.png";
-import ServiceImg2 from "../assets/Service3Img2.png";
+import ServiceImg1 from "../assets/Service3Img1.webp";
+import ServiceImg2 from "../assets/Service3Img2.webp";
 
 function ServicePTPage() {
 

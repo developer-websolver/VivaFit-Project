@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../footer";
 import FaqPage from "../faq";
-import Image1 from "../assets/Radhanagar/Image1.jpg";
-import Image2 from "../assets/Radhanagar/Image2.jpg";
-import Image3 from "../assets/Radhanagar/Image3.jpg";
-import Image4 from "../assets/Radhanagar/Image4.jpg";
-import Image5 from "../assets/Radhanagar/Image5.jpg";
+import Image1 from "../assets/Radhanagar/Image1.webp";
+import Image2 from "../assets/Radhanagar/Image2.webp";
+import Image3 from "../assets/Radhanagar/Image3.webp";
+import Image4 from "../assets/Radhanagar/Image4.webp";
+import Image5 from "../assets/Radhanagar/Image5.webp";
 
 const gymImages = [
     Image1,

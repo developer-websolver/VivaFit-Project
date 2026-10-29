@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../footer";
 import FaqPage from "../faq";
-import Image1 from "../assets/Thirumangalam/Image1.jpg";
-import Image2 from "../assets/Thirumangalam/Image2.jpg";
-import Image3 from "../assets/Thirumangalam/Image3.jpg";
-import Image4 from "../assets/Thirumangalam/Image4.jpg";
+import Image1 from "../assets/Thirumangalam/Image1.webp";
+import Image2 from "../assets/Thirumangalam/Image2.webp";
+import Image3 from "../assets/Thirumangalam/Image3.webp";
+import Image4 from "../assets/Thirumangalam/Image4.webp";
 
 const gymImages = [
     Image1,

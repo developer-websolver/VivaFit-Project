@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Footer from "../footer";
 import FaqPage from "../faq";
-import Image1 from '../assets/Korratur/Image1.jpeg'
+import Image1 from '../assets/Korratur/Image1.webp';
 
 
 const gymImages = [

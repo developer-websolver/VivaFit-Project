@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 import Footer from "./footer";
-import Image1 from "./assets/Mogapair/Image9.jpeg";
-import Image2 from "./assets/Mogapair/Image1.jpg";
-import Image3 from "./assets/AboutUs3.png";
-import Image4 from "./assets/AboutUs4.png"
+import Image1 from "./assets/Mogapair/Image9.webp";
+import Image2 from "./assets/Mogapair/Image1.webp";
+import Image3 from "./assets/AboutUs3.webp";
+import Image4 from "./assets/AboutUs4.webp";
 import { ArrowUpRight } from "lucide-react";
 
 function AboutUsPage() {

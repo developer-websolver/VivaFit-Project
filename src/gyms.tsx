@@ -3,15 +3,15 @@ import { ArrowUpRight, Dumbbell,} from "lucide-react";
 import { Link } from "react-router-dom";
 import Footer from "./footer";
 import FaqPage from "./faq";
-import Gym1 from "./assets/Thirumangalam/Image1.jpg";
-import Gym2 from "./assets/Ambattur/Image2.jpg";
-import Gym3 from "./assets/Pammal/Image3.jpg";
-import Gym4 from "./assets/Madhanandpuram/Image2.png";
-import Gym5 from "./assets/Mogapair/Image1.jpg";
-import Gym6 from "./assets/Radhanagar/Image1.jpg";
-import Gym7 from "./assets/Vadapalani/Image2.jpg";
-import Gym8 from "./assets/Alapakkam/Image1.png";
-import Gym9 from "./assets/Korratur/Image1.jpeg";
+import Gym1 from "./assets/Thirumangalam/Image1.webp";
+import Gym2 from "./assets/Ambattur/Image2.webp";
+import Gym3 from "./assets/Pammal/Image3.webp";
+import Gym4 from "./assets/Madhanandpuram/Image2.webp";
+import Gym5 from "./assets/Mogapair/Image1.webp";
+import Gym6 from "./assets/Radhanagar/Image1.webp";
+import Gym7 from "./assets/Vadapalani/Image2.webp";
+import Gym8 from "./assets/Alapakkam/Image1.webp";
+import Gym9 from "./assets/Korratur/Image1.webp";
 
 const gyms = [
   {

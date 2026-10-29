@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import FaqPage from "../faq";
 import Footer from "../footer";
-import Blog1 from "../assets/Blog1.png"
+import Blog1 from "../assets/Blog1.webp";
 
 function Blog1Page() {
   const takeaways = [
