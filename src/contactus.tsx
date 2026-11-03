@@ -18,10 +18,12 @@ import Footer from "./footer";
 import { sendEmail } from "./components/email";
 
 function ContactPage() {
-  const [subject, setSubject] = useState("");
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwYhPlWexOMetasSRU0pFQdThmtkKyltCAmOfxT2_0DOta1XAHV6Dl84MJ7_4LC5qbR/exec";
 
+  const [subject, setSubject] = useState("");
   const [Loading, setLoading] = useState(false);
   const [status, setstatus] = useState("");
+
 
   const handleSubmit = async (
     e: React.FormEvent<HTMLFormElement>
@@ -34,22 +36,43 @@ function ContactPage() {
     setLoading(true);
     setstatus("");
 
+    const contactData = {
+      fullName: String(formData.get("fullName") || ""),
+      email: String(formData.get("email") || ""),
+      phone: String(formData.get("phone") || ""),
+      subject: String(formData.get("subject") || ""),
+      message: String(formData.get("message") || ""),
+    };
+
     try {
+      // Step 1: Send email through EmailJS
       await sendEmail({
-        fullName: String(formData.get("fullName") || ""),
-        email: String(formData.get("email") || ""),
-        phone: Number(formData.get("phone") || ""),
-        subject: String(formData.get("subject") || ""),
-        message: String(formData.get("message") || ""),
+        ...contactData,
+        phone: Number(contactData.phone),
       });
 
-      setstatus("Email sent successfully!");
+      // Step 2: Save enquiry in Google Sheets
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain;charset=utf-8",
+        },
+        body: JSON.stringify({
+          ...contactData,
+          formType: "contact",
+          submittedAt: new Date().toISOString(),
+        }),
+      });
+
+      setstatus("Your enquiry has been submitted successfully!");
       form.reset();
       setSubject("");
+
     } catch (error) {
-      console.error("EmailJS error:", error);
+      console.error("Contact form submission error:", error);
       setstatus(
-        "Email not sent. Please check your EmailJS settings and try again."
+        "Unable to submit your enquiry. Please try again."
       );
     } finally {
       setLoading(false);
@@ -62,7 +85,7 @@ function ContactPage() {
       <div className="border-b border-white/10 bg-[#061512]" >
         <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-12 pt-40">
           <h1 className="text-sm font-semibold tracking-wide sm:text-base">
-            
+
           </h1>
 
           <nav aria-label="Breadcrumb">

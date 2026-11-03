@@ -155,6 +155,21 @@ function Blog1Page() {
               <p>
                 Fitness does not have to involve weights alone. Zumba classes offer an enjoyable way to combine dance and cardiovascular exercise, while yoga can support flexibility, balance, and relaxation.
               </p>
+               <h3 className="text-xl font-bold text-white sm:text-2xl">
+                5.  Physiotherapy, Posture Correction & Pre and Post-Natal Fitness
+               </h3>
+               <p>
+                Physiotherapy plays an important role in improving mobility, managing pain and supporting overall physical wellness.
+               </p>
+               <p>
+                Understanding body posture and identifying common posture-related issues, such as rounded shoulders, forward head posture and lower-back misalignment, can help prevent discomfort and improve daily movement.
+               </p>
+               <p>
+                With proper posture correction techniques, targeted strengthening exercises, stretching and guided rehabilitation, individuals can work towards better body alignment and long-term physical health.
+               </p>
+               <p>
+                At VIVAFIT, fitness and wellness also extend to every stage of motherhood through specialized Pre-Natal and Post-Natal fitness classes.
+               </p>
             </div>
 
             {/* Key Takeaways */}
@@ -202,21 +217,21 @@ function Blog1Page() {
                 {[
                   {
                     title: "Women's Fitness & Wellness",
-                    path: "/blog-1",
+                    path: "/Women's Fitness & Wellness",
                     active:true,
                   },
                   {
                     title: "Nutrition & Healthy Eating for Women",
-                    path: "/blog-2",
+                    path: "/Nutrition & Healthy Eating for Women",
                   
                   },
                   {
                     title: "Fitness Tips for Women",
-                    path: "/blog-3",
+                    path: "/Fitness Tips for Women",
                   },
                   {
                     title: "Benefits of Regular Exercise for Women",
-                    path: "/blog-4",
+                    path: "/Benefits of Regular Exercise for Women",
                   },
                 ].map((service) => (
                   <Link

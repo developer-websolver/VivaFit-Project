@@ -12,6 +12,7 @@ import Gym6 from "./assets/Radhanagar/Image1.webp";
 import Gym7 from "./assets/Vadapalani/Image2.webp";
 import Gym8 from "./assets/Alapakkam/Image1.webp";
 import Gym9 from "./assets/Korratur/Image1.webp";
+import TestimoniesPage from "./testimonies";
 
 const gyms = [
   {
@@ -225,6 +226,7 @@ function GymsPage() {
           </Link>
         </div>
       </section>
+      <TestimoniesPage/>
       <FaqPage/>
       <Footer/>
     </main>

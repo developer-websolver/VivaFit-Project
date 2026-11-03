@@ -76,10 +76,10 @@ function App() {
         <Route path="/vivafit-alapakkam" element={<AlapakamPage />} />
         <Route path="/vivafit-korattur" element={<KoratturPage/>} />
         <Route path="/blogs" element={<BlogPage />} />
-        <Route path="/blog-1" element={<Blog1Page/>} />
-        <Route path="/blog-2" element={<Blog2Page/>}/>
-        <Route path="/blog-3" element={<Blog3Page/>}/>
-        <Route path="/blog-4" element={<Blog4Page/>}/>
+        <Route path="/Women's Fitness & Wellness" element={<Blog1Page/>} />
+        <Route path="/Nutrition & Healthy Eating for Women" element={<Blog2Page/>}/>
+        <Route path="/Fitness Tips for Women" element={<Blog3Page/>}/>
+        <Route path="/Benefits of Regular Exercise for Women" element={<Blog4Page/>}/>
         <Route path="/contactus" element={<ContactUsPage />} />
       </Routes>
     </>

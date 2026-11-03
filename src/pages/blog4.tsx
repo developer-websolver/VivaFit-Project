@@ -203,20 +203,21 @@ function Blog4Page() {
                 {[
                   {
                     title: "Women's Fitness & Wellness",
-                    path: "/blog-1",
+                    path: "/Women's Fitness & Wellness",
+                    active:true,
                   },
                   {
                     title: "Nutrition & Healthy Eating for Women",
-                    path: "/blog-2",
-                    active: true,
+                    path: "/Nutrition & Healthy Eating for Women",
+                  
                   },
                   {
                     title: "Fitness Tips for Women",
-                    path: "/blog-3",
+                    path: "/Fitness Tips for Women",
                   },
                   {
                     title: "Benefits of Regular Exercise for Women",
-                    path: "/blog-4",
+                    path: "/Benefits of Regular Exercise for Women",
                   },
                 ].map((service) => (
                   <Link

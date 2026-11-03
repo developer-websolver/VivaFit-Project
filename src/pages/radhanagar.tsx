@@ -9,6 +9,7 @@ import Image2 from "../assets/Radhanagar/Image2.webp";
 import Image3 from "../assets/Radhanagar/Image3.webp";
 import Image4 from "../assets/Radhanagar/Image4.webp";
 import Image5 from "../assets/Radhanagar/Image5.webp";
+import TestimoniesPage from "../testimonies";
 
 const gymImages = [
     Image1,
@@ -336,6 +337,7 @@ function RadhanagarPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>

@@ -9,6 +9,7 @@ import Image2 from "../assets/Ambattur/Image2.webp";
 import Image3 from "../assets/Ambattur/Image3.webp";
 import Image4 from "../assets/Ambattur/Image4.webp";
 import Image5 from "../assets/Ambattur/Image5.webp";
+import TestimoniesPage from "../testimonies";
 
 const gymImages = [
     Image1,
@@ -335,6 +336,7 @@ function AmbatturPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>

@@ -5,7 +5,9 @@ import Image1 from "./assets/Mogapair/Image9.webp";
 import Image2 from "./assets/Mogapair/Image1.webp";
 import Image3 from "./assets/AboutUs3.webp";
 import Image4 from "./assets/AboutUs4.webp";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, } from "lucide-react";
+import Founder from "./assets/Founder & Ceo.jpeg";
+import { Smartphone, Apple, ExternalLink } from "lucide-react";
 
 function AboutUsPage() {
     return (
@@ -14,7 +16,7 @@ function AboutUsPage() {
             <header className="border-b border-white/10 ">
                 <div className="mx-auto flex max-w-[1280px] items-center justify-between px-5 py-5 sm:px-8 lg:px-12 ">
                     <h4 className="text-sm font-semibold tracking-wide sm:text-base">
-                        
+
                     </h4>
 
                     <nav aria-label="Breadcrumb">
@@ -54,7 +56,7 @@ function AboutUsPage() {
                         Your Fitness, Your{" "}
                         <span className="text-[#B6FF00]">VivaFit,</span>{" "}
                         Built for Every{" "}
-                        <span className="text-[#B6FF00]">Women.</span>
+                        <span className="text-[#B6FF00]">Woman.</span>
                     </h1>
 
                     <p className="mt-4 max-w-lg border border-[#B6FF00] px-3 py-2 text-sm leading-relaxed text-white/85 sm:text-base">
@@ -97,7 +99,7 @@ function AboutUsPage() {
                         src={Image2}
                         alt="VIVAFIT women's fitness gym reception"
                         className="h-[320px] w-full rounded-2xl object-cover sm:h-[420px]  lg:h-[560px]"
-                        
+
                     />
                 </div>
             </section>
@@ -115,7 +117,7 @@ function AboutUsPage() {
                             </span>
 
                             <h3 className="text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl">
-                                Why Women{" "}
+                                Why Do Women{" "}
                                 <span className="text-[#B6FF00]">Choose</span> VivaFit?
                             </h3>
 
@@ -151,13 +153,36 @@ function AboutUsPage() {
                     </div>
 
                     {/* Main Image */}
-                    <div className="overflow-hidden rounded-xl">
+                    <div className="group relative overflow-hidden rounded-xl">
+
                         <img
                             src={Image3}
                             alt="Our dedicated fitness team"
-                            className="h-[240px] w-full object-cover object-center grayscale sm:h-[320px] md:h-[380px] lg:h-[420px]"
+                            className="h-[240px] w-full object-cover object-center grayscale transition-transform duration-700 group-hover:scale-105 sm:h-[320px] md:h-[380px] lg:h-[420px]"
                         />
+
+                        {/* Dark Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#080B08]/90 via-[#080B08]/20 to-transparent" />
+
+                        {/* Image Text */}
+                        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-8">
+
+                            <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#B6FF00] sm:text-sm">
+                                Results
+                            </p>
+
+                            <h3 className="mt-2 text-1xl font-black uppercase leading-tight tracking-wide text-white sm:text-4xl lg:text-4xl">
+                                Right in Front
+                                <br />
+                                of Your <span className="text-[#B6FF00]">Eyes.</span>
+                            </h3>
+
+                            <div className="mt-4 h-1 w-16 rounded-full bg-[#B6FF00] transition-all duration-500 group-hover:w-28" />
+
+                        </div>
                     </div>
+
+
 
                 </div>
             </div>
@@ -226,7 +251,7 @@ function AboutUsPage() {
             <div className="overflow-hidden bg-[#0F1C1A] px-5 py-14 text-white sm:px-8 sm:py-20 lg:px-12 lg:py-24">
                 <div className="mx-auto max-w-[1200px]">
 
-                  
+
 
                     {/* Main Layout */}
                     <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr] md:gap-14 lg:gap-20">
@@ -251,8 +276,8 @@ function AboutUsPage() {
                         {/* Content */}
                         <div className="py-2 md:py-8">
                             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#B6FF00] sm:text-sm mb-15">
-                            Our Vision
-                        </p>
+                                Our Vision
+                            </p>
 
                             <h2 className="text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl">
                                 Every Woman.
@@ -290,9 +315,243 @@ function AboutUsPage() {
                 </div>
             </div>
 
+            <section className="relative overflow-hidden bg-[#0F1C1A] px-5 py-16 text-white sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+
+                <div className="mx-auto max-w-7xl">
+
+                    {/* Section Heading */}
+                    <div className="mb-12 max-w-3xl">
+                        <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#B6FF00]">
+                            Leadership & Vision
+                        </span>
+
+                        <h2 className="mt-5 text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-5xl">
+                            A Vision for
+                            <span className="text-[#B6FF00]"> Stronger Women </span>
+                            and a Healthier World.
+                        </h2>
+                    </div>
+
+                    {/* Main Layout */}
+                    <div className="grid items-start gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+
+                        {/* Founder Profile */}
+                        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#172622] p-5 sm:p-7">
+
+                            {/* Founder Image */}
+                            <div className="relative overflow-hidden rounded-xl bg-[#0D130D]">
+                                <img
+                                    src={Founder}
+                                    alt="Mohammed Shahul Hameed, Founder and CEO of VIVAFIT India"
+                                    className="h-[320px] w-full object-cover object-top transition-transform duration-700 hover:scale-105 sm:h-[420px]"
+                                    loading="lazy"
+                                />
+
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1C1A]/70 via-transparent to-transparent" />
+
+                                <div className="absolute bottom-4 left-4">
+                                    <span className="rounded-full bg-[#B6FF00] px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-black">
+                                        Founder & CEO
+                                    </span>
+                                </div>
+                            </div>
+
+                            {/* Founder Details */}
+                            <div className="mt-7">
+                                <h3 className="text-2xl font-black sm:text-3xl">
+                                    Mohammed Shahul Hameed
+                                </h3>
+
+                                <p className="mt-2 text-sm font-semibold leading-6 text-[#B6FF00]">
+                                    Founder & CEO
+                                </p>
+
+                                <p className="mt-1 text-sm leading-6 text-gray-400">
+                                    Yora Fitness Private Limited
+                                </p>
+
+                                <p className="text-sm leading-6 text-gray-400">
+                                    The Master Franchisee – VIVAFIT India
+                                </p>
+
+                                {/* Experience Highlight */}
+                                <div className="mt-6 flex items-center gap-4 rounded-xl border border-[#B6FF00]/20 bg-[#0F1C1A] p-4">
+                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#B6FF00]/10 text-[#B6FF00]">
+                                        <span className="text-xl font-black">13+</span>
+                                    </div>
+
+                                    <div>
+                                        <p className="font-bold text-white">
+                                            Years of Experience
+                                        </p>
+                                        <p className="mt-1 text-xs leading-5 text-gray-400">
+                                            Franchise sales, business development,
+                                            operations and strategic growth.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Founder Biography */}
+                            <p className="mt-6 border-t border-white/10 pt-6 text-sm leading-7 text-gray-300 sm:text-base">
+                                With a postgraduate qualification in Retail Management
+                                and a professional background in hospitality, I bring
+                                over 13 years of hands-on experience in franchise sales,
+                                business development, operations, and strategic growth.
+                                My journey has been driven by a deep belief that successful
+                                businesses are built on trust, transparency, and mutually
+                                rewarding partnerships.
+                            </p>
+
+                        </div>
+
+                        {/* Vision Content */}
+                        <div className="flex flex-col justify-center lg:py-5">
+
+                            <div className="mb-8">
+                                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#B6FF00]">
+                                    A Message from Our Founder
+                                </span>
+
+                                <h3 className="mt-4 text-2xl font-black leading-tight sm:text-3xl lg:text-4xl">
+                                    Building More Than Gyms.
+                                    <span className="text-[#B6FF00]">
+                                        {" "}Creating a Movement.
+                                    </span>
+                                </h3>
+                            </div>
+
+                            {/* Vision Paragraphs */}
+                            <div className="space-y-6 text-sm leading-8 text-gray-300 sm:text-base">
+
+                                <p className="border-l-2 border-[#B6FF00] pl-5">
+                                    At VIVAFIT, our vision goes beyond building gyms.
+                                    We are passionate about transforming the women's
+                                    fitness landscape in India by bringing world-class
+                                    fitness practices, international standards, and
+                                    innovative wellness solutions to the niche
+                                    women-only fitness market.
+                                </p>
+
+                                <p>
+                                    As franchise veterans, we understand the value of
+                                    every investor's money. We are committed to creating
+                                    sustainable, profitable, and mutually beneficial
+                                    franchise opportunities that empower our partners
+                                    to grow with confidence while making a meaningful
+                                    difference in their communities.
+                                </p>
+
+                                <p>
+                                    Our mission is to create a healthier society by
+                                    making fitness accessible, empowering women to
+                                    prioritise their wellbeing, and generating meaningful
+                                    employment opportunities for women across the fitness
+                                    industry. From fitness professionals and trainers
+                                    to leadership and entrepreneurial roles, we believe
+                                    in creating an ecosystem where women can thrive
+                                    both professionally and personally.
+                                </p>
+
+                                <p>
+                                    At VIVAFIT, we are not simply building fitness
+                                    centres; we are building stronger women, healthier
+                                    communities, and a future where every woman has
+                                    the opportunity to lead a healthier, happier,
+                                    and more empowered life.
+                                </p>
+
+                            </div>
+
+                            {/* Closing Highlight */}
+                            <div className="mt-9 rounded-xl border border-[#B6FF00]/20 bg-[#B6FF00]/5 p-5 sm:p-6">
+                                <p className="text-lg font-bold leading-relaxed text-white sm:text-xl">
+                                    "Stronger Women. Healthier Communities.
+                                    <span className="text-[#B6FF00]">
+                                        {" "}A Better Future."
+                                    </span>
+                                </p>
+                                <p className="mt-2 text-xs font-semibold uppercase tracking-widest text-gray-500">
+                                    The VIVAFIT Vision
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            {/* Our Mobile Apps */}
+            <section className="bg-[#061512] px-5 py-10 text-white sm:px-8 lg:px-12">
+                <div className="mx-auto flex max-w-[1280px] flex-col gap-6 rounded-2xl border border-white/10 bg-[#172622] p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
+
+                    {/* Section Heading */}
+                    <div className="text-center md:text-left">
+                        <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#B6FF00]">
+                            Stay Connected
+                        </span>
+
+                        <h2 className="mt-2 text-xl font-bold sm:text-2xl">
+                            Our Mobile Apps
+                        </h2>
+
+                        <p className="mt-2 text-sm text-white/60">
+                            Experience VIVAFIT wherever you go.
+                        </p>
+                    </div>
+
+                    {/* App Download Links */}
+                    <div className="flex w-full flex-col gap-3 sm:flex-row md:w-auto">
+
+                        {/* Android App */}
+                        <Link
+                            to="https://play.google.com/store/apps/details?id=com.yoactiv.yorafitness"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex w-full items-center justify-center gap-3 rounded-xl border border-white/15 bg-[#0F1C1A] px-5 py-4 transition-all duration-300 hover:border-[#B6FF00] hover:bg-[#B6FF00] sm:w-auto"
+                        >
+                            <Smartphone
+                                size={22}
+                                className="text-[#B6FF00] transition-colors group-hover:text-black"
+                            />
+
+                            <span className="text-sm font-semibold text-white transition-colors group-hover:text-black">
+                                Android App
+                            </span>
+
+                            <ExternalLink
+                                size={15}
+                                className="text-white/50 transition-colors group-hover:text-black"
+                            />
+                        </Link>
+
+                        {/* iOS App */}
+                        <Link
+                            to="https://apps.apple.com/us/app/viva-fit/id6475255690"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex w-full items-center justify-center gap-3 rounded-xl border border-white/15 bg-[#0F1C1A] px-5 py-4 transition-all duration-300 hover:border-[#B6FF00] hover:bg-[#B6FF00] sm:w-auto"
+                        >
+                            <Apple
+                                size={22}
+                                className="text-[#B6FF00] transition-colors group-hover:text-black"
+                            />
+
+                            <span className="text-sm font-semibold text-white transition-colors group-hover:text-black">
+                                iOS App
+                            </span>
+
+                            <ExternalLink
+                                size={15}
+                                className="text-white/50 transition-colors group-hover:text-black"
+                            />
+                        </Link>
+
+                    </div>
+                </div>
+            </section>
+
             <Footer />
-
-
 
         </div>
     );

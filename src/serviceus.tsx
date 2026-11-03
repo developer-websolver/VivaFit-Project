@@ -271,7 +271,7 @@ function ServiceUsPage() {
                         </span>
 
                         <h2 className="mt-4 max-w-xl text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-[38px]">
-                            More Than a <span className="text-[#B6FF00]">Workout </span> at
+                            Is It More Than a <span className="text-[#B6FF00]"> Workout </span> at
                             <span className="text-[#B6FF00]"> VivaFit?</span>
                         </h2>
 

@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Footer from "../footer";
 import FaqPage from "../faq";
 import Image1 from '../assets/Korratur/Image1.webp';
+import TestimoniesPage from "../testimonies";
 
 
 const gymImages = [
@@ -330,6 +331,7 @@ function KoratturPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>

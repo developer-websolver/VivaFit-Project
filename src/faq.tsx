@@ -1,8 +1,24 @@
 
 import { useState } from "react";
-import {  Plus, Minus } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
-const faqs = [
+type FAQ = {
+    question: string;
+    answer: string | string[];
+};
+
+const faqs: FAQ[] = [
+    {
+        question: "Why an International Ladies Gym Franchise?",
+        answer: [
+            "Be a proud international gym franchise owner.",
+            "Enter a steadily growing niche fitness market.",
+            "Buyback offer and assured return options.",
+            "Low investment and operational costs.",
+            "FOCO option available.",
+            "High return on investment potential."
+        ]
+    },
     {
         question: "Which is the best ladies gym in Chennai?",
         answer:
@@ -35,7 +51,9 @@ function FaqPage() {
 
     return (
         <section className="min-h-screen bg-[#0F1C1A] px-5 py-14 text-white sm:px-8 sm:py-16 lg:px-16 lg:py-20">
+
             <div className="mx-auto max-w-7xl">
+
                 {/* Heading */}
                 <div className="max-w-2xl">
                     <span className="inline-flex rounded-full bg-[#273331] px-3 py-2 text-[11px] font-semibold text-[#B6FF00]">
@@ -44,7 +62,9 @@ function FaqPage() {
 
                     <h2 className="mt-5 text-2xl font-extrabold leading-tight tracking-tight sm:text-3xl lg:text-[38px]">
                         Frequently{" "}
-                        <span className="text-[#B6FF00]">Asked Questions</span>
+                        <span className="text-[#B6FF00]">
+                            Asked Questions
+                        </span>
                     </h2>
 
                     <p className="mt-3 max-w-md text-sm leading-6 text-gray-400 sm:text-base sm:leading-7">
@@ -54,61 +74,106 @@ function FaqPage() {
                 </div>
 
                 {/* FAQ Accordion */}
-                <div className="mt-8 space-y-2 sm:mt-10">
+                <div className="mt-8 space-y-3 sm:mt-10">
+
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index;
 
                         return (
                             <div
                                 key={faq.question}
-                                className={`overflow-hidden rounded-xl border transition-colors duration-300 ${isOpen
-                                        ? "border-white/5 bg-[#202D2B]"
-                                        : "border-white/[0.07] bg-transparent hover:bg-[#172320]"
-                                    }`}
+                                className={`overflow-hidden rounded-xl border transition-all duration-300 ${
+                                    isOpen
+                                        ? "border-[#B6FF00]/20 bg-[#202D2B]"
+                                        : "border-white/[0.07] bg-transparent hover:border-white/20 hover:bg-[#172320]"
+                                }`}
                             >
+
+                                {/* Question */}
                                 <button
                                     type="button"
                                     onClick={() =>
                                         setOpenIndex(isOpen ? null : index)
                                     }
                                     aria-expanded={isOpen}
-                                    className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:px-5"
+                                    aria-controls={`faq-answer-${index}`}
+                                    className="flex w-full items-center justify-between gap-4 px-4 py-4 text-left sm:px-5 sm:py-5"
                                 >
                                     <span
-                                        className={`text-sm font-semibold leading-6 sm:text-base ${isOpen ? "text-white" : "text-gray-200"
-                                            }`}
+                                        className={`text-sm font-semibold leading-6 transition-colors sm:text-base ${
+                                            isOpen
+                                                ? "text-[#B6FF00]"
+                                                : "text-gray-200"
+                                        }`}
                                     >
                                         {faq.question}
                                     </span>
 
                                     <span
-                                        className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full transition-colors ${isOpen
-                                                ? "bg-white text-[#0F1C1A]"
+                                        className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
+                                            isOpen
+                                                ? "rotate-180 bg-[#B6FF00] text-[#0F1C1A]"
                                                 : "bg-white/10 text-white"
-                                            }`}
+                                        }`}
                                     >
                                         {isOpen ? (
-                                            <Minus size={13} strokeWidth={3} />
+                                            <Minus size={14} strokeWidth={2.5} />
                                         ) : (
-                                            <Plus size={13} strokeWidth={3} />
+                                            <Plus size={14} strokeWidth={2.5} />
                                         )}
                                     </span>
                                 </button>
 
+                                {/* Answer */}
                                 <div
-                                    className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                                        }`}
+                                    id={`faq-answer-${index}`}
+                                    className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                                        isOpen
+                                            ? "grid-rows-[1fr]"
+                                            : "grid-rows-[0fr]"
+                                    }`}
                                 >
                                     <div className="overflow-hidden">
-                                        <p className="px-4 pb-4 text-xs leading-6 text-gray-400 sm:px-5 sm:pb-5 sm:text-sm sm:leading-7">
-                                            {faq.answer}
-                                        </p>
+
+                                        <div className="border-t border-white/5 px-4 pb-5 pt-4 sm:px-5 sm:pt-5">
+
+                                            {Array.isArray(faq.answer) ? (
+
+                                                /* Bullet Point Answer */
+                                                <ul className="space-y-3">
+                                                    {faq.answer.map((point, i) => (
+                                                        <li
+                                                            key={i}
+                                                            className="flex items-start gap-3 text-xs leading-6 text-gray-300 sm:text-sm sm:leading-7"
+                                                        >
+                                                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#B6FF00]" />
+
+                                                            <span className="transition-colors duration-200 hover:text-white">
+                                                                {point}
+                                                            </span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+
+                                            ) : (
+
+                                                /* Normal Paragraph Answer */
+                                                <p className="text-xs leading-6 text-gray-400 sm:text-sm sm:leading-7">
+                                                    {faq.answer}
+                                                </p>
+
+                                            )}
+
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
                         );
                     })}
+
                 </div>
+
             </div>
         </section>
     );

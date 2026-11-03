@@ -17,43 +17,68 @@ import { Link } from "react-router-dom";
 import { sendEmail } from "./components/email";
 
 function ContactPage() {
+
+  const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwYhPlWexOMetasSRU0pFQdThmtkKyltCAmOfxT2_0DOta1XAHV6Dl84MJ7_4LC5qbR/exec";
   
   const [subject, setSubject] = useState("");
   const [Loading, setLoading] = useState(false);
   const [status, setstatus] = useState("");
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
+  
+const handleSubmit = async (
+  e: React.FormEvent<HTMLFormElement>
+) => {
+  e.preventDefault();
 
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+  const form = e.currentTarget;
+  const formData = new FormData(form);
 
-    setLoading(true);
-    setstatus("");
+  setLoading(true);
+  setstatus("");
 
-    try {
-      await sendEmail({
-        fullName: String(formData.get("fullName") || ""),
-        email: String(formData.get("email") || ""),
-        phone: Number(formData.get("phone") || ""),
-        subject: String(formData.get("subject") || ""),
-        message: String(formData.get("message") || ""),
-      });
-
-      setstatus("Email sent successfully!");
-      form.reset();
-      setSubject("");
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      setstatus(
-        "Email not sent. Please check your EmailJS settings and try again."
-      );
-    } finally {
-      setLoading(false);
-    }
+  const contactData = {
+    fullName: String(formData.get("fullName") || ""),
+    email: String(formData.get("email") || ""),
+    phone: String(formData.get("phone") || ""),
+    subject: String(formData.get("subject") || ""),
+    message: String(formData.get("message") || ""),
   };
+
+  try {
+    // Step 1: Send email through EmailJS
+    await sendEmail({
+      ...contactData,
+      phone: Number(contactData.phone),
+    });
+
+    // Step 2: Save enquiry in Google Sheets
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+      body: JSON.stringify({
+        ...contactData,
+        formType: "contact",
+        submittedAt: new Date().toISOString(),
+      }),
+    });
+
+    setstatus("Your enquiry has been submitted successfully!");
+    form.reset();
+    setSubject("");
+
+  } catch (error) {
+    console.error("Contact form submission error:", error);
+    setstatus(
+      "Unable to submit your enquiry. Please try again."
+    );
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="min-h-screen bg-[#061512] text-white">

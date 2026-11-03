@@ -9,6 +9,7 @@ import Image2 from "../assets/Alapakkam/Image2.webp";
 import Image3 from "../assets/Alapakkam/Image3.webp";
 import Image4 from "../assets/Alapakkam/Image4.webp";
 import Image5 from "../assets/Alapakkam/Image5.webp";
+import TestimoniesPage from "../testimonies";
 
 
 
@@ -340,6 +341,7 @@ function AlapakamPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage />
             <FaqPage />
             <Footer />
         </main>

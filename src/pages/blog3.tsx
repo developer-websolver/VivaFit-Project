@@ -202,25 +202,25 @@ function Blog3Page() {
                 </h2>
               </div>
 
-              <div className="divide-y divide-white/[0.07]">
+               <div className="divide-y divide-white/[0.07]">
                 {[
                   {
                     title: "Women's Fitness & Wellness",
-                    path: "/blog-1",
+                    path: "/Women's Fitness & Wellness",
+                    active:true,
                   },
                   {
                     title: "Nutrition & Healthy Eating for Women",
-                    path: "/blog-2",
+                    path: "/Nutrition & Healthy Eating for Women",
                   
                   },
                   {
                     title: "Fitness Tips for Women",
-                    path: "/blog-3",
-                      active: true,
+                    path: "/Fitness Tips for Women",
                   },
                   {
                     title: "Benefits of Regular Exercise for Women",
-                    path: "/blog-4",
+                    path: "/Benefits of Regular Exercise for Women",
                   },
                 ].map((service) => (
                   <Link

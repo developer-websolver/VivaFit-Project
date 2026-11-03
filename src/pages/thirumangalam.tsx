@@ -8,6 +8,7 @@ import Image1 from "../assets/Thirumangalam/Image1.webp";
 import Image2 from "../assets/Thirumangalam/Image2.webp";
 import Image3 from "../assets/Thirumangalam/Image3.webp";
 import Image4 from "../assets/Thirumangalam/Image4.webp";
+import TestimoniesPage from "../testimonies";
 
 const gymImages = [
     Image1,
@@ -348,6 +349,7 @@ function Thirumangalam() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>

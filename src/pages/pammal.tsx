@@ -12,6 +12,8 @@ import Image5 from "../assets/Pammal/Image5.webp";
 import Image6 from "../assets/Pammal/Image6.webp";
 import Image7 from "../assets/Pammal/Image7.webp";
 import Image8 from "../assets/Pammal/Image8.webp";
+import  TestimoniesPage from "../testimonies";
+
 
 const gymImages = [
     Image1,
@@ -340,6 +342,7 @@ function PammalPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>

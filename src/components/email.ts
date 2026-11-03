@@ -9,9 +9,13 @@ export interface EmailFormData {
   message: string;
 }
 
-const serviceid = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const templateid = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const publickey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+// const serviceid = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+// const templateid = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+// const publickey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+const serviceid ="service_ppxeyjg";
+const templateid = "template_uutt0yb";
+const publickey = "f3cSrJWGi8fob_EaP";
 
 export const sendEmail = async (data: EmailFormData) => {
   if (!serviceid || !templateid || !publickey) {

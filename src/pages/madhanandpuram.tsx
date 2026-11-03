@@ -12,6 +12,7 @@ import Image5 from "../assets/Madhanandpuram/Image5.webp";
 import Image6 from "../assets/Madhanandpuram/Image6.webp";
 import Image7 from "../assets/Madhanandpuram/Image7.webp";
 import Image8 from "../assets/Madhanandpuram/Image8.webp";
+import TestimoniesPage from "../testimonies";
 
 const gymImages = [
     Image1,
@@ -341,6 +342,7 @@ function MadhanandpuramPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>

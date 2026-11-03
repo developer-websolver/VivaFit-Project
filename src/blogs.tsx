@@ -21,54 +21,54 @@ const blogs = [
       "VIVAFIT is a women-only gym promoting women's fitness and wellness through strength training, body transformation, Zumba, yoga, and healthy lifestyle programs.",
     image: Blog1,
     readTime: "5 min read",
-    path: "/blog-1",
+    path: "/Women's Fitness & Wellness",
   },
   {
     category: "Nutrition",
     title: "Nutrition & Healthy Eating for Women",
     description:
       "VIVAFIT promotes women's nutrition and wellness through healthy eating habits, balanced nutrition, and fitness guidance to support energy, muscle recovery, weight management, and overall health.",
-    image:Blog2,
+    image: Blog2,
     readTime: "4 min read",
-    path: "/blog-2",
+    path: "/Nutrition & Healthy Eating for Women",
   },
   {
     category: "Fitness Tips",
     title: "Fitness Tips for Women",
     description:
       "VIVAFIT offers fitness tips for women, including strength training, cardio workouts, balanced nutrition, and healthy lifestyle habits to support women's fitness and overall wellness.",
-    image:Blog3,
+    image: Blog3,
     readTime: "6 min read",
-    path: "/blog-3",
+    path: "/Fitness Tips for Women",
   },
   {
     category: "Exercise",
     title: "Benefits of Regular Exercise for Women",
     description:
       "Discover the benefits of regular exercise for women at VIVAFIT Gym, including strength training, cardio workouts, flexibility, and overall wellness in a supportive women-only fitness environment.",
-    image:Blog4,
+    image: Blog4,
     readTime: "5 min read",
-    path: "/blog-4",
+    path: "/Benefits of Regular Exercise for Women",
   },
 ];
 
 const services = [
   {
     title: "Women's Fitness & Wellness",
-    path: "/blog-1",
+    path: "/Women's Fitness & Wellness",
   },
   {
     title: "Nutrition & Healthy Eating for Women",
-    path: "/blog-2",
+    path: "/Nutrition & Healthy Eating for Women",
     active: true,
   },
   {
     title: "Fitness Tips for Women",
-    path: "/blog-3",
+    path: "/Fitness Tips for Women",
   },
   {
     title: "Benefits of Regular Exercise for Women",
-    path: "/blog-4",
+     path: "/Benefits of Regular Exercise for Women",
   },
 ];
 
@@ -236,8 +236,8 @@ function BlogPage() {
                     key={service.path}
                     to={service.path}
                     className={`group flex min-h-[58px] items-center justify-between gap-3 px-4 py-4 transition-colors duration-300 sm:px-5 ${service.active
-                        ? "bg-[#B6FF00] text-[#061512]"
-                        : "text-white hover:bg-[#B6FF00] hover:text-[#061512]"
+                      ? "bg-[#B6FF00] text-[#061512]"
+                      : "text-white hover:bg-[#B6FF00] hover:text-[#061512]"
                       }`}
                   >
                     <span className="text-sm font-semibold leading-5 sm:text-base">
@@ -246,8 +246,8 @@ function BlogPage() {
 
                     <span
                       className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border transition-colors duration-300 ${service.active
-                          ? "border-[#061512] bg-[#061512] text-[#B6FF00]"
-                          : "border-white/70 text-white group-hover:border-[#061512] group-hover:bg-[#061512] group-hover:text-[#B6FF00]"
+                        ? "border-[#061512] bg-[#061512] text-[#B6FF00]"
+                        : "border-white/70 text-white group-hover:border-[#061512] group-hover:bg-[#061512] group-hover:text-[#B6FF00]"
                         }`}
                     >
                       <ArrowUpRight size={16} strokeWidth={2.5} />

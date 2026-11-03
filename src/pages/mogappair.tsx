@@ -13,6 +13,7 @@ import Image6 from "../assets/Mogapair/Image6.webp";
 import Image7 from "../assets/Mogapair/Image7.webp";
 import Image8 from "../assets/Mogapair/Image8.webp";
 import Image9 from "../assets/Mogapair/Image9.webp";
+import TestimoniesPage from "../testimonies";
 
 const gymImages = [
    Image1,
@@ -343,6 +344,7 @@ function MogappairPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>

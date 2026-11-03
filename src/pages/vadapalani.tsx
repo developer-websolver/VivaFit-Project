@@ -11,6 +11,7 @@ import Image4 from "../assets/Vadapalani/Image4.webp";
 import Image5 from "../assets/Vadapalani/Image5.webp";
 import Image6 from "../assets/Vadapalani/Image6.webp";
 import Image7 from "../assets/Vadapalani/Image7.webp";
+import TestimoniesPage from "../testimonies";
 
 const gymImages = [
     Image1,
@@ -341,6 +342,7 @@ function VadapalaniPage() {
                     </Link>
                 </div>
             </section>
+            <TestimoniesPage/>
             <FaqPage />
             <Footer />
         </main>
